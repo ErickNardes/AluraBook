@@ -1,0 +1,171 @@
+.container__button:checked~.container__label>.cabecalho__drawer {
+    background-image: url("../img/Menu\ Aberto.png");
+}
+
+.container__button:checked~.container__label {
+    background: var(--color-blue-gradient);
+}
+
+.cabecalho__drawer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Menu.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cabecalho {
+    background-color: var(--background-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.container__button:checked~.lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--background-header);
+}
+
+.lista-menu__titulo {
+    color: var(--color-orange);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--color-blue-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.container__button {
+    display: none;
+}
+
+.container__titulo {
+    display: none;
+}
+
+.opcoes {
+    display: none;
+}
+
+.container__texto {
+    display: none;
+}
+
+@media screen and (min-width:1024px) {
+
+    .opcoes__button:checked~.opcoes__label>.opcoes__item {
+        background: var(--color-blue-gradient);
+        color: white;
+    }
+
+    .opcoes__item {
+        padding: 2em 1em;
+    }
+
+    .lista-menu__item:hover {
+        background: var(--color-blue-gradient);
+
+    }
+
+    .lista-menu__item:hover>.lista-menu__link {
+        -webkit-text-fill-color: white;
+        text-decoration: none;
+    }
+
+    .container__titulo,
+    .container__titulo--negrito {
+        font-family: var(--font-secundaria);
+        font-size: 30px;
+
+    }
+
+    .container__titulo {
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .opcoes {
+        display: flex;
+    }
+
+    .opcoes__item {
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opcoes__link {
+        text-decoration: none;
+        color: var(--color-black);
+    }
+
+    .container__imagem-transparent {
+        display: none;
+    }
+
+    .cabecalho__drawer {
+        display: none;
+    }
+
+    .opcoes__button:checked~.lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .opcoes__button {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+
+    .container__texto {
+        display: block;
+    }
+
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--color-black);
+    }
+
+    .cabecalho {
+        padding: 0 2em;
+    }
+
+    .opcoes {
+        margin-right: auto;
+    }
+}
